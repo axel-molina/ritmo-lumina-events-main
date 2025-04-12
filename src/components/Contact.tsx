@@ -13,6 +13,7 @@ import {
 import { toast } from "sonner";
 import { Calendar, Mail, MapPin, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -88,24 +89,49 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <motion.section 
+      id="contact" 
+      className="py-20"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             ¿Listo para hacer de tu evento algo inolvidable? Solicita una
             cotización personalizada y nos pondremos en contacto contigo a la
             brevedad.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-          <div className="bg-card/30 backdrop-blur-sm p-8 rounded-lg border border-border/50">
+          <motion.div 
+            className="bg-card/30 backdrop-blur-sm p-8 rounded-lg border border-border/50"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-2xl font-bold mb-6 text-dj-yellow">
               Solicita tu presupuesto
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form 
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nombre</Label>
@@ -196,92 +222,151 @@ export default function Contact() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-dj-yellow text-black hover:bg-dj-yellow/80"
-                disabled={loading}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                {loading ? "Enviando..." : "Enviar Solicitud"}
-              </Button>
-            </form>
-          </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-dj-yellow text-black hover:bg-dj-yellow/80"
+                  disabled={loading}
+                >
+                  {loading ? "Enviando..." : "Enviar Solicitud"}
+                </Button>
+              </motion.div>
+            </motion.form>
+          </motion.div>
 
-          <div className="lg:pl-8">
+          <motion.div 
+            className="lg:pl-8"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-2xl font-bold mb-6 text-dj-yellow">
               Información de Contacto
             </h3>
 
             <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="bg-dj-yellow/20 p-3 rounded-full mr-4">
+              <motion.div 
+                className="flex items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="bg-dj-yellow/20 p-3 rounded-full mr-4"
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(250, 204, 21, 0.3)" }}
+                >
                   <Phone className="h-5 w-5 text-dj-yellow" />
-                </div>
+                </motion.div>
                 <div>
                   <h4 className="font-semibold mb-1">Llámanos</h4>
                   <p className="text-muted-foreground">(+54) 9 11 37761843</p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start">
-                <div className="bg-dj-yellow/20 p-3 rounded-full mr-4">
+              <motion.div 
+                className="flex items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="bg-dj-yellow/20 p-3 rounded-full mr-4"
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(250, 204, 21, 0.3)" }}
+                >
                   <Mail className="h-5 w-5 text-dj-yellow" />
-                </div>
+                </motion.div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
                   <p className="text-muted-foreground">
                     ivanmolina052@gmail.com
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start">
-                <div className="bg-dj-yellow/20 p-3 rounded-full mr-4">
+              <motion.div 
+                className="flex items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="bg-dj-yellow/20 p-3 rounded-full mr-4"
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(250, 204, 21, 0.3)" }}
+                >
                   <Calendar className="h-5 w-5 text-dj-yellow" />
-                </div>
+                </motion.div>
                 <div>
                   <h4 className="font-semibold mb-1">Horario de Atención</h4>
                   <p className="text-muted-foreground">
                     Lunes - Viernes: 9:00 AM - 6:00 PM
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start">
-                <div className="bg-dj-yellow/20 p-3 rounded-full mr-4">
+              <motion.div 
+                className="flex items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="bg-dj-yellow/20 p-3 rounded-full mr-4"
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(250, 204, 21, 0.3)" }}
+                >
                   <MapPin className="h-5 w-5 text-dj-yellow" />
-                </div>
+                </motion.div>
                 <div>
                   <h4 className="font-semibold mb-1">Ubicación</h4>
                   <p className="text-muted-foreground">
                     Buenos Aires, Argentina
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
-            <div className="mt-8 p-6 bg-dj-yellow/10 rounded-lg border border-dj-yellow/30">
+            <motion.div 
+              className="mt-8 p-6 bg-dj-yellow/10 rounded-lg border border-dj-yellow/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              whileHover={{ boxShadow: "0 0 15px rgba(250, 204, 21, 0.3)" }}
+            >
               <h4 className="font-semibold mb-2">¿Necesitas ayuda urgente?</h4>
               <p className="mb-4 text-sm">
                 Contáctanos directamente por WhatsApp para una respuesta
                 inmediata sobre disponibilidad y precios.
               </p>
-              <Button
-                variant="outline"
-                className="border-dj-yellow text-dj-yellow hover:bg-dj-yellow hover:text-black"
-                asChild
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <a
-                  href="https://wa.me/5491137761843?text=Hola,%20estoy%20interesado%20en%20contratar%20sus%20servicios%20para%20un%20evento."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  variant="outline"
+                  className="border-dj-yellow text-dj-yellow hover:bg-dj-yellow hover:text-black"
+                  asChild
                 >
-                  Contactar por WhatsApp
-                </a>
-              </Button>
-            </div>
-          </div>
+                  <a
+                    href="https://wa.me/5491137761843?text=Hola,%20estoy%20interesado%20en%20contratar%20sus%20servicios%20para%20un%20evento."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contactar por WhatsApp
+                  </a>
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
