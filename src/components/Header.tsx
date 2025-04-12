@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,7 +60,6 @@ export default function Header() {
 
         {/* Mobile Navigation Button */}
         <div className="flex items-center md:hidden space-x-4">
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
