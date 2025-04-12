@@ -28,7 +28,7 @@ export default function Hero() {
         
         <div className="overflow-hidden mb-6">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white animate-text-reveal" style={{ animationDelay: '0.6s' }}>
-            RITMO <span className="text-dj-yellow">LUMINA</span>
+            MOLI <span className="text-dj-yellow">DJ</span>
           </h1>
         </div>
         

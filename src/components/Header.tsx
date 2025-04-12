@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
@@ -33,15 +32,15 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-black/80 backdrop-blur-md py-2 shadow-lg" 
+        scrolled
+          ? "bg-black/80 backdrop-blur-md py-2 shadow-lg"
           : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
-          <span className="text-2xl font-bold text-dj-yellow">RITMO&nbsp;</span>
-          <span className="text-2xl font-bold text-white">LUMINA</span>
+          <span className="text-2xl font-bold text-dj-yellow">MOLI&nbsp;</span>
+          <span className="text-2xl font-bold text-white">DJ</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -58,17 +57,14 @@ export default function Header() {
           <Button className="bg-dj-yellow text-black hover:bg-dj-yellow/80">
             Cotizar Ahora
           </Button>
-          <div className="ml-2">
-            <ThemeToggle />
-          </div>
         </nav>
 
         {/* Mobile Navigation Button */}
         <div className="flex items-center md:hidden space-x-4">
           <ThemeToggle />
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             className="text-white hover:text-dj-yellow"
             onClick={() => setIsMenuOpen(true)}
           >
@@ -81,16 +77,16 @@ export default function Header() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black z-50 md:hidden">
           <div className="flex justify-end p-4">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="text-white hover:text-dj-yellow"
               onClick={() => setIsMenuOpen(false)}
             >
               <X className="h-6 w-6" />
             </Button>
           </div>
-          
+
           <nav className="flex flex-col items-center justify-center h-full space-y-8">
             {navItems.map((item) => (
               <a
@@ -102,7 +98,7 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <Button 
+            <Button
               className="bg-dj-yellow text-black hover:bg-dj-yellow/80 mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
