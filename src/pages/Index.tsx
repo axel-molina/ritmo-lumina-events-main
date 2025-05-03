@@ -15,7 +15,8 @@ const Index = () => {
   }, []);
 
   console.log("Index");
-  console.log("Dark mode set");
+  console.log("Index");
+  console.log("Index");
 
   return (
     <div className="min-h-screen">
