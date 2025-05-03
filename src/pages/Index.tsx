@@ -14,9 +14,7 @@ const Index = () => {
     document.documentElement.classList.add("dark");
   }, []);
 
-  console.log("Index");
-  console.log("Index");
-  console.log("Index");
+  console.log("Index de prueba");
 
   return (
     <div className="min-h-screen">
