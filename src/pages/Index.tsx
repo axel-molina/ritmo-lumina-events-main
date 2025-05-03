@@ -15,6 +15,8 @@ const Index = () => {
   }, []);
 
   console.log("Index de prueba");
+  console.log("Index de prueba");
+
 
   return (
     <div className="min-h-screen">
