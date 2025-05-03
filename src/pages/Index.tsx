@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -14,7 +13,9 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
-  
+
+  console.log("Index");
+
   return (
     <div className="min-h-screen">
       <Header />
