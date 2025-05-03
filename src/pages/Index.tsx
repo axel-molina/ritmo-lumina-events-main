@@ -17,6 +17,7 @@ const Index = () => {
   console.log("Prueba de test linea 18");
   console.log("Prueba de test linea 19");
   console.log("Prueba de test linea 20");
+  console.log("Prueba de test linea 21");
 
   return (
     <div className="min-h-screen">
