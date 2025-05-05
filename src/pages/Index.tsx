@@ -12,6 +12,7 @@ const Index = () => {
   // Set dark mode as default
   console.log("test push");
   console.log("test push  2");
+  console.log("test push  2");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
