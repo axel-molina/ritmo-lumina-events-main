@@ -13,6 +13,7 @@ const Index = () => {
   console.log("test push");
   console.log("test push  2");
   console.log("test push  2");
+  console.log("test push  2");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
