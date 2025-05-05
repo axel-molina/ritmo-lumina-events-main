@@ -10,15 +10,10 @@ import Marquee from "../components/Marquee";
 
 const Index = () => {
   // Set dark mode as default
+  console.log("test push");
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
-
-  console.log("Prueba de test linea 18");
-  console.log("Prueba de test linea 19");
-  console.log("Prueba de test linea 20");
-  console.log("Prueba de test linea 21");
-  console.log("Prueba de test linea 22");
 
   return (
     <div className="min-h-screen">
