@@ -10,7 +10,6 @@ import Marquee from "../components/Marquee";
 
 const Index = () => {
   // Set dark mode as default
-  console.log("este es el console log que deberias avisarme");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
