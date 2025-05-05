@@ -10,6 +10,7 @@ import Marquee from "../components/Marquee";
 
 const Index = () => {
   // Set dark mode as default
+  console.log("Monster es el mejor squad");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
