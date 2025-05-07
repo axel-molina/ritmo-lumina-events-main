@@ -11,8 +11,8 @@ import { useLocation } from "react-router-dom";
 
 const Index = () => {
   // Set dark mode as default
+  console.log("First 2");
   const location = useLocation();
-  console.log("First");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
