@@ -7,10 +7,11 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import WhatsappButton from "../components/WhatsappButton";
 import Marquee from "../components/Marquee";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
   // Set dark mode as default
-  console.log("Monster es el mejor squad");
+  console.log("g");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
